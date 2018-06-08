@@ -25,4 +25,9 @@ public class Application {
     public String test() {
         return "test";
     }
+
+    @RequestMapping("/logout")
+    public String logout() {
+        return "logout";
+    }
 }

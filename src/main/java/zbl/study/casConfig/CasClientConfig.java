@@ -69,7 +69,7 @@ public class CasClientConfig {
     @Bean
     public FilterRegistrationBean singleSignOutFilter() {
         FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();
-        LogoutFilter logoutFilter = new LogoutFilter(autoConfig.getCasServerUrlPrefix() + "/logout?service=" + autoConfig.getServerName(), new SecurityContextLogoutHandler());
+        LogoutFilter logoutFilter = new LogoutFilter(autoConfig.getCasServerUrlPrefix() + "logout?service=" + autoConfig.getServerName(), new SecurityContextLogoutHandler());
         filterRegistrationBean.setFilter(logoutFilter);
         filterRegistrationBean.setEnabled(casEnable);
         if (autoConfig.getSignOutFilters().size() > 0)
