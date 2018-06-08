@@ -19,12 +19,12 @@ import javax.servlet.Filter;
 
 @SuppressWarnings("unchecked")
 @Configuration
-public class CasConfig {
+public class CasClientConfig {
     @Inject
     private SpringCasAutoConfig autoConfig;
     private static boolean casEnable = true;
 
-    public CasConfig() {
+    public CasClientConfig() {
     }
 
     @Bean
