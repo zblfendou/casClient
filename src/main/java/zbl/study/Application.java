@@ -1,9 +1,12 @@
 package zbl.study;
 
+import org.jasig.cas.client.util.AssertionHolder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.inject.Inject;
 
 @SpringBootApplication
 @RestController
@@ -15,7 +18,7 @@ public class Application {
 
     @RequestMapping("/casTest")
     public String casTest() {
-        return "success !!!";
+        return "success !!!"+AssertionHolder.getAssertion().getPrincipal().getName();
     }
 
     @RequestMapping("/ignoreTest")
